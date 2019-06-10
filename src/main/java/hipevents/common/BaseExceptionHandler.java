@@ -1,4 +1,4 @@
-package hipevents.common.exception;
+package hipevents.common;
 
 import hipevents.event.exception.EventNotFoundException;
 import org.slf4j.Logger;
@@ -17,7 +17,7 @@ public class BaseExceptionHandler {
 
     @ExceptionHandler
     public ResponseEntity handleEventNotFoundException(EventNotFoundException e) {
-        logger.warn("Event not found. id={}, Exception={}", e.id, e);
+        logger.warn("Event not found. id={}", e.id);
         return new ResponseEntity(HttpStatus.NOT_FOUND);
     }
 

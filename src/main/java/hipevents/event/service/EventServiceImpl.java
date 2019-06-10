@@ -1,8 +1,6 @@
 package hipevents.event.service;
 
-import hipevents.event.domain.EventItem;
-import hipevents.event.domain.EventListItem;
-import hipevents.event.domain.EventItemInput;
+import hipevents.event.domain.*;
 import hipevents.event.exception.EventNotFoundException;
 import hipevents.event.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,8 +39,12 @@ public class EventServiceImpl implements EventService {
 
     @Override
     public void createNewEvent(EventItemInput eventItemInput) {
-        var event = new EventItem(eventItemInput);
-        eventRepository.save(event);
+        eventRepository.save(new EventItem(eventItemInput));
+    }
+
+    @Override
+    public void addParticipant(String ID, Participant participant) {
+
     }
 
 }

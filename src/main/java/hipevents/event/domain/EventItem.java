@@ -13,6 +13,7 @@ public class EventItem {
     private String id;
     private String name;
     private String description;
+    private List<Owner> owners;
     private LocalDateTime begins;
     private LocalDateTime ends;
     private List<Participant> participants;
@@ -81,5 +82,13 @@ public class EventItem {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public List<Owner> getOwners() {
+        return owners;
+    }
+
+    public void setOwners(List<Owner> owners) {
+        this.owners = owners;
     }
 }

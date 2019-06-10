@@ -17,7 +17,6 @@ group 'hipevents'
 version '1.0-SNAPSHOT'
 
 bootJar {
-    baseName = 'event-api'
     version = '0.1.0'
 }
 
@@ -32,6 +31,7 @@ dependencies {
     }
     compile("org.springframework.boot:spring-boot-starter-jetty")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    compile("org.springframework.boot:spring-boot-started-security")
     compile("io.springfox:springfox-swagger2:2.9.2")
     compile("io.springfox:springfox-swagger-ui:2.9.2")
     testCompile('org.springframework.boot:spring-boot-starter-test')

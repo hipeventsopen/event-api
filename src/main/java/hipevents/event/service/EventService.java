@@ -1,8 +1,6 @@
 package hipevents.event.service;
 
-import hipevents.event.domain.EventItem;
-import hipevents.event.domain.EventListItem;
-import hipevents.event.domain.EventItemInput;
+import hipevents.event.domain.*;
 
 import java.util.List;
 
@@ -10,5 +8,6 @@ public interface EventService {
     List<EventListItem> getEventFeed();
     EventItem getEventByID(String ID);
     void deleteEventByID(String ID);
-    void createNewEvent(EventItemInput eventItemInput);
+    void createNewEvent(EventItemInput eventItemPostBody);
+    void addParticipant(String ID, Participant participant);
 }
